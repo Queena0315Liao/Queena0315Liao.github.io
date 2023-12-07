@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    #caculator{
+      width:300px;
+      font-size:20px;
+      margin: 0 auto;
+      padding:20px;
+      border-radius:5px;
+      background-color:rosybrown;
+    }
+    input[type="text"]{
+      width:150px;
+      height:50px;
+      font-size:20px;
+      margin:5px;
+    }
+    button{
+      background-color:yellow;
+      margin:5px;
+      width:50px;
+      height:50px;
+      font-size: 20px;
+    }
+    </style>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script>
+    function myfunction(btnval){
+      if(btnval=="="){
+      var total =eval(document.getElementById("total").value);
+     document.getElementById("total").value=total;
+      }else{
+    document.getElementById("total").value =document.getElementById("total").value+btnval;
+      }
+    }
+      function clearFunction(){
+         document.getElementById("total").value=""
+      }
+      function changeColor(color){
+        document.getElementById("caculator").style.backgroundColor=
+color;}
+  function touch(){
+    alert("touch");}
+    </script>
+</head>
+
+  <body style="background-color:navy">
+    <div id="caculator">
+        <input type="radio" name="color" id="pink" value="pink" onchange="changeColor('pink')">pink
+      <input type="radio" name="color" id="lightblue" value="lighblue" onchange="changeColor('lightblue')">lightblue
+<br>
+    <input type="text" id="total" value=""><br>
+  <button type="button" value="1" onclick="myfunction(1)">1</button>
+  <button type="button" value="2" onclick="myfunction(2)">2</button>
+  <button type="button" value="3" onclick="myfunction(3)">3</button>
+  <button type="button" value="+" onclick="myfunction('+')">+</button>
+<br>
+  <button type="button" value="4" onclick="myfunction(4)">4</button>
+  <button type="button" value="5" onclick="myfunction(5)">5</button>
+  <button type="button" value="6" onclick="myfunction(6)">6</button>
+  <button type="button" value="-" onclick="myfunction('-')">-</button>
+<br>
+  <button type="button" value="7" onclick="myfunction(7)">7</button>
+  <button type="button" value="8" onclick="myfunction(8)">8</button>
+  <button type="button" value="9" onclick="myfunction(9)">9</button>
+  <button type="button" value="*" onclick="myfunction('*')">*</button>
+<br>
+  <button type="button" id="btC" onclick="clearFunction()">C</button>
+  <button type="button" value="0" onclick="myfunction(0)">0</button>
+  <button type="button" value="=" onclick="myfunction('=')">=</button>
+  <button type="button" value="/" onclick="myfunction('/')">/</button>
+      </div>
+</body>
+  
+    
+
+</html>
